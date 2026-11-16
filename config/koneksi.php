@@ -1,0 +1,16 @@
+<?php
+//config/koneksi.php
+
+$host ='localhost';
+$user = 'root';
+$password = '';
+$database = 'db_ukk_2026_nizar';
+
+if (!isset($koneksi) || !($koneksi instanceof mysqli)) {
+    $koneksi = mysqli_connect($host,$user,$password,$database);
+
+    if (!$koneksi) {
+        die('Koneksi database gagal: ' .mysqli_connect_error());
+    }
+}
+?>
